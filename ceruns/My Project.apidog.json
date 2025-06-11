@@ -1,0 +1,1264 @@
+{
+  "apidogProject": "1.0.0",
+  "$schema": {
+    "app": "apidog",
+    "type": "project",
+    "version": "1.2.0"
+  },
+  "info": {
+    "name": "My Project",
+    "description": "",
+    "mockRule": {
+      "rules": [],
+      "enableSystemRule": true
+    }
+  },
+  "apiCollection": [
+    {
+      "name": "Root",
+      "id": 3330447,
+      "auth": {},
+      "securityScheme": {},
+      "parentId": 0,
+      "serverId": "",
+      "description": "",
+      "identityPattern": {
+        "httpApi": {
+          "type": "methodAndPath",
+          "bodyType": "",
+          "fields": []
+        }
+      },
+      "shareSettings": {},
+      "visibility": "SHARED",
+      "preProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "postProcessors": [
+        {
+          "id": "inheritProcessors",
+          "type": "inheritProcessors",
+          "data": {}
+        }
+      ],
+      "inheritPostProcessors": {},
+      "inheritPreProcessors": {},
+      "items": [
+        {
+          "name": "ceruns",
+          "id": 3907128,
+          "auth": {},
+          "securityScheme": {},
+          "parentId": 0,
+          "serverId": "",
+          "description": "",
+          "identityPattern": {
+            "httpApi": {
+              "type": "inherit",
+              "bodyType": "",
+              "fields": []
+            }
+          },
+          "shareSettings": {},
+          "visibility": "INHERITED",
+          "preProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "postProcessors": [
+            {
+              "id": "inheritProcessors",
+              "type": "inheritProcessors",
+              "data": {}
+            }
+          ],
+          "inheritPostProcessors": {},
+          "inheritPreProcessors": {},
+          "items": [
+            {
+              "name": "getAllJopTiming",
+              "api": {
+                "id": "17549482",
+                "method": "get",
+                "path": "http://localhost/___Mo Projects/ceruns/app-api/jop_timing.php",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "76tbXduOAU",
+                      "enable": true,
+                      "name": "action",
+                      "example": "getAllJopTiming"
+                    }
+                  ],
+                  "header": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "uAHbsgAENZ",
+                      "example": "en",
+                      "enable": true,
+                      "name": "Lang-Code"
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "24487334",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {
+                        "01JWM93VZMQ3FM6NY891RPYRB0": {
+                          "x-tmp-pending-properties": true
+                        }
+                      },
+                      "x-apidog-orders": [
+                        "01JWM93VZMQ3FM6NY891RPYRB0"
+                      ],
+                      "required": [
+                        "01JWM93VZMQ3FM6NY891RPYRB0"
+                      ]
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "success",
+                    "data": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"date_added\": \"2025-06-01 00:49:25\",\n            \"lang_details\": {\n                \"id\": 1,\n                \"jop_timing_id\": 1,\n                \"lang_code\": \"ar\",\n                \"name\": \"عمل بدوام كامل\",\n                \"date_added\": \"2025-06-01\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"date_added\": \"2025-06-01 00:49:25\",\n            \"lang_details\": {\n                \"id\": 2,\n                \"jop_timing_id\": 1,\n                \"lang_code\": \"en\",\n                \"name\": \"full-time\",\n                \"date_added\": \"2025-06-01\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"date_added\": \"2025-06-01 00:49:59\",\n            \"lang_details\": {\n                \"id\": 3,\n                \"jop_timing_id\": 2,\n                \"lang_code\": \"ar\",\n                \"name\": \"عمل بدوام جزئي\",\n                \"date_added\": \"2025-06-01\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"date_added\": \"2025-06-01 00:49:59\",\n            \"lang_details\": {\n                \"id\": 4,\n                \"jop_timing_id\": 2,\n                \"lang_code\": \"en\",\n                \"name\": \"part-time\",\n                \"date_added\": \"2025-06-01\"\n            }\n        }\n    ],\n    \"success\": true\n}",
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed",
+                    "data": "{\n    \"success\": false,\n    \"error\": \"someErrorHappen\"\n}",
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "get all the jop timing as full time , part time ... etc and it's langs \nyou must call it when you register to choose one or more of the ids and send it in register",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 10,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.24487334"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "getAllJopPositions",
+              "api": {
+                "id": "17549502",
+                "method": "get",
+                "path": "http://localhost/___Mo Projects/ceruns/app-api/jop_positions.php",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "Tq8ixga09g",
+                      "enable": true,
+                      "name": "action",
+                      "example": "getAllJopPositions"
+                    }
+                  ],
+                  "header": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "dOy44JtVZE",
+                      "example": "en",
+                      "enable": true,
+                      "name": "Lang-Code"
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "24489285",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "success",
+                    "data": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Content Writer\"\n        },\n        {\n            \"id\": 2,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Proofreader\"\n        },\n        {\n            \"id\": 3,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Graphic Designer\"\n        },\n        {\n            \"id\": 4,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Web Developer\"\n        },\n        {\n            \"id\": 5,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Mobile App Developer\"\n        },\n        {\n            \"id\": 6,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Translator\"\n        },\n        {\n            \"id\": 7,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Social Media Manager\"\n        },\n        {\n            \"id\": 8,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Digital Marketer\"\n        },\n        {\n            \"id\": 9,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Video Editor\"\n        },\n        {\n            \"id\": 10,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"UI/UX Designer\"\n        },\n        {\n            \"id\": 11,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Virtual Assistant\"\n        },\n        {\n            \"id\": 12,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Data Entry Specialist\"\n        },\n        {\n            \"id\": 13,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Freelance Accountant\"\n        },\n        {\n            \"id\": 14,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Software Developer\"\n        },\n        {\n            \"id\": 15,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Nutrition Consultant\"\n        },\n        {\n            \"id\": 16,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Interior Designer\"\n        },\n        {\n            \"id\": 17,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Personal Trainer\"\n        },\n        {\n            \"id\": 18,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Online Tutor\"\n        },\n        {\n            \"id\": 19,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Photographer\"\n        },\n        {\n            \"id\": 20,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Audio Editor\"\n        },\n        {\n            \"id\": 21,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Business Consultant\"\n        },\n        {\n            \"id\": 22,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Game Developer\"\n        },\n        {\n            \"id\": 23,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"AI Developer\"\n        },\n        {\n            \"id\": 24,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Legal Consultant\"\n        },\n        {\n            \"id\": 25,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Financial Advisor\"\n        },\n        {\n            \"id\": 26,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Technical Writer\"\n        },\n        {\n            \"id\": 27,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Ebook Editor\"\n        },\n        {\n            \"id\": 28,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Content Strategist\"\n        },\n        {\n            \"id\": 29,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"WordPress Developer\"\n        },\n        {\n            \"id\": 30,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Flutter Developer\"\n        },\n        {\n            \"id\": 31,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"React.js Developer\"\n        },\n        {\n            \"id\": 32,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Python Developer\"\n        },\n        {\n            \"id\": 33,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"PHP Developer\"\n        },\n        {\n            \"id\": 34,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Shopify Developer\"\n        },\n        {\n            \"id\": 35,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Magento Developer\"\n        },\n        {\n            \"id\": 36,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Logo Designer\"\n        },\n        {\n            \"id\": 37,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Motion Graphics Designer\"\n        },\n        {\n            \"id\": 38,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"3D Designer\"\n        },\n        {\n            \"id\": 39,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"T-Shirt Designer\"\n        },\n        {\n            \"id\": 40,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Business Card Designer\"\n        },\n        {\n            \"id\": 41,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Brochure Designer\"\n        },\n        {\n            \"id\": 42,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"UI Designer\"\n        },\n        {\n            \"id\": 43,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"UX Designer\"\n        },\n        {\n            \"id\": 44,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Wix Website Designer\"\n        },\n        {\n            \"id\": 45,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Squarespace Website Designer\"\n        },\n        {\n            \"id\": 46,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"iOS App Developer\"\n        },\n        {\n            \"id\": 47,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Android App Developer\"\n        },\n        {\n            \"id\": 48,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"PhoneGap Developer\"\n        },\n        {\n            \"id\": 49,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Xamarin Developer\"\n        },\n        {\n            \"id\": 50,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"React Native Developer\"\n        },\n        {\n            \"id\": 51,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Ionic Developer\"\n        },\n        {\n            \"id\": 52,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Kotlin Developer\"\n        },\n        {\n            \"id\": 53,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Swift Developer\"\n        },\n        {\n            \"id\": 54,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Java Developer\"\n        },\n        {\n            \"id\": 55,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Objective-C Developer\"\n        },\n        {\n            \"id\": 56,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"C# Developer\"\n        },\n        {\n            \"id\": 57,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"C++ Developer\"\n        },\n        {\n            \"id\": 58,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Ruby on Rails Developer\"\n        },\n        {\n            \"id\": 59,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Node.js Developer\"\n        },\n        {\n            \"id\": 60,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Angular Developer\"\n        },\n        {\n            \"id\": 61,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Vue.js Developer\"\n        },\n        {\n            \"id\": 62,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Laravel Developer\"\n        },\n        {\n            \"id\": 63,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Django Developer\"\n        },\n        {\n            \"id\": 64,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"ASP.NET Developer\"\n        },\n        {\n            \"id\": 65,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Spring Boot Developer\"\n        },\n        {\n            \"id\": 66,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Express.js Developer\"\n        },\n        {\n            \"id\": 67,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Symfony Developer\"\n        },\n        {\n            \"id\": 68,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"CodeIgniter Developer\"\n        },\n        {\n            \"id\": 69,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Zend Developer\"\n        },\n        {\n            \"id\": 70,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"CakePHP Developer\"\n        },\n        {\n            \"id\": 71,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Yii Developer\"\n        },\n        {\n            \"id\": 72,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Phalcon Developer\"\n        },\n        {\n            \"id\": 73,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Slim Framework Developer\"\n        },\n        {\n            \"id\": 74,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Sails.js Developer\"\n        },\n        {\n            \"id\": 75,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Meteor.js Developer\"\n        },\n        {\n            \"id\": 76,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Ember.js Developer\"\n        },\n        {\n            \"id\": 77,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Backbone.js Developer\"\n        },\n        {\n            \"id\": 78,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Knockout.js Developer\"\n        },\n        {\n            \"id\": 79,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Polymer Developer\"\n        },\n        {\n            \"id\": 80,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Aurelia Developer\"\n        },\n        {\n            \"id\": 81,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Riot.js Developer\"\n        },\n        {\n            \"id\": 82,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Mithril.js Developer\"\n        },\n        {\n            \"id\": 83,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Nuxt.js Developer\"\n        },\n        {\n            \"id\": 84,\n            \"date_added\": \"2025-06-01 01:08:12\",\n            \"name\": \"Next.js Developer\"\n        }\n    ],\n    \"success\": true\n}",
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed",
+                    "data": "{\n    \"success\": false,\n    \"error\": \"someErrorHappen\"\n}",
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "get all jops that we have in the app to show it to user to choose the jops for registen ",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 20,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.24489285"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "register",
+              "api": {
+                "id": "17593837",
+                "method": "post",
+                "path": "http://localhost/___Mo Projects/ceruns/app-api/user_auth.php",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "bDl6DlXmX8",
+                      "enable": true,
+                      "name": "action",
+                      "example": "register"
+                    }
+                  ],
+                  "header": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "8n5gcp42vb",
+                      "example": "en",
+                      "enable": true,
+                      "name": "Lang-Code"
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "24550544",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [
+                      {
+                        "required": true,
+                        "description": "",
+                        "id": "RqdjiPxcHh",
+                        "example": "en",
+                        "name": "Lang-Code",
+                        "type": "string",
+                        "schema": {
+                          "type": "string",
+                          "enum": [
+                            "en",
+                            "ar"
+                          ],
+                          "x-apidog-enum": [
+                            {
+                              "value": "en",
+                              "name": "",
+                              "description": ""
+                            },
+                            {
+                              "value": "ar",
+                              "name": "",
+                              "description": ""
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "success",
+                    "data": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 9,\n        \"user_name\": \"Test User\",\n        \"img\": null,\n        \"email\": \"test@example.com\",\n        \"mobile\": \"1234567890\",\n        \"code\": \"\",\n        \"dial_code\": \"+20\",\n        \"open_location\": \"true\",\n        \"birth_date\": \"1990-01-01\",\n        \"gender\": null,\n        \"exp_years\": 3,\n        \"country\": \"Egypt\",\n        \"jop_times\": [\n            {\n                \"id\": 2,\n                \"jop_timing_id\": 1,\n                \"lang_code\": \"en\",\n                \"name\": \"full-time\",\n                \"date_added\": \"2025-06-01\"\n            },\n            {\n                \"id\": 4,\n                \"jop_timing_id\": 2,\n                \"lang_code\": \"en\",\n                \"name\": \"part-time\",\n                \"date_added\": \"2025-06-01\"\n            },\n            {\n                \"id\": 6,\n                \"jop_timing_id\": 3,\n                \"lang_code\": \"en\",\n                \"name\": \"contract\",\n                \"date_added\": \"2025-06-01\"\n            }\n        ],\n        \"jop_titles\": [\n            {\n                \"id\": 1,\n                \"date_added\": \"2025-06-01 01:08:12\",\n                \"name\": \"Content Writer\"\n            },\n            {\n                \"id\": 2,\n                \"date_added\": \"2025-06-01 01:08:12\",\n                \"name\": \"Proofreader\"\n            },\n            {\n                \"id\": 3,\n                \"date_added\": \"2025-06-01 01:08:12\",\n                \"name\": \"Graphic Designer\"\n            }\n        ]\n    }\n}",
+                    "responseId": 24550544,
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed",
+                    "data": "{\n    \"success\": false,\n    \"error\": \"Failed_To_Register\"\n}",
+                    "responseId": 24550544,
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "object",
+                    "data": "{\n    \"mobile\": \"1234567890\",\n    \"email\": \"test@example.com\",\n    \"password\": \"Test@123\",\n    \"user_name\": \"Test User\",\n    \"dial_code\": \"+20\",\n    \"exp_years\": \"3\",\n    \"country\": \"Egypt\",\n    \"jop_times\": [\n        1,\n        2,\n        3\n    ],\n    \"birth_date\": \"1990-01-01\",\n    \"jop_titles\": [\n        1,\n        2,\n        3\n    ]\n}",
+                    "responseId": 24550544,
+                    "ordering": 3,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed email exist",
+                    "data": "{\n    \"success\": false,\n    \"message\": \"Email_exists\"\n}",
+                    "responseId": 24550544,
+                    "ordering": 4,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n    \"mobile\": \"1234567890\",\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"Test@123\",\r\n    \"user_name\": \"Test User\",\r\n    \"dial_code\": \"+20\",\r\n    \"exp_years\": \"3\",\r\n    \"country\": \"Egypt\",\r\n    \"jop_times\": [1, 2, 3],\r\n    \"birth_date\": \"1990-01-01\",\r\n    \"jop_titles\": [1, 2, 3]\r\n}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 30,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.24550544"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "login",
+              "api": {
+                "id": "17594027",
+                "method": "post",
+                "path": "http://localhost/___Mo Projects/ceruns/app-api/user_auth.php",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "ZOPvAYVJAW",
+                      "enable": true,
+                      "name": "action",
+                      "example": "login"
+                    }
+                  ],
+                  "header": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "1g13s1bc8H",
+                      "example": "en",
+                      "enable": true,
+                      "name": "Lang-Code"
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "24548582",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "failed email",
+                    "data": "{\n    \"success\": false,\n    \"message\": \"Email_not_exist\"\n}",
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed password",
+                    "data": "{\n    \"success\": false,\n    \"error\": \"Wrong_Password\"\n}",
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "success",
+                    "data": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 3,\n        \"user_name\": \"Test User\",\n        \"img\": null,\n        \"email\": \"test@example.com\",\n        \"mobile\": \"1234567890\",\n        \"code\": \"\",\n        \"dial_code\": \"+20\",\n        \"open_location\": \"true\",\n        \"birth_date\": \"1990-01-01\",\n        \"gender\": null,\n        \"exp_years\": 3,\n        \"country\": \"Egypt\",\n        \"jop_times\": [\n            {\n                \"id\": 2,\n                \"jop_timing_id\": 1,\n                \"lang_code\": \"en\",\n                \"name\": \"full-time\",\n                \"date_added\": \"2025-06-01\"\n            },\n            {\n                \"id\": 4,\n                \"jop_timing_id\": 2,\n                \"lang_code\": \"en\",\n                \"name\": \"part-time\",\n                \"date_added\": \"2025-06-01\"\n            },\n            {\n                \"id\": 6,\n                \"jop_timing_id\": 3,\n                \"lang_code\": \"en\",\n                \"name\": \"contract\",\n                \"date_added\": \"2025-06-01\"\n            }\n        ],\n        \"jop_titles\": [\n            {\n                \"id\": 1,\n                \"date_added\": \"2025-06-01 01:08:12\",\n                \"name\": \"Content Writer\"\n            },\n            {\n                \"id\": 2,\n                \"date_added\": \"2025-06-01 01:08:12\",\n                \"name\": \"Proofreader\"\n            },\n            {\n                \"id\": 3,\n                \"date_added\": \"2025-06-01 01:08:12\",\n                \"name\": \"Graphic Designer\"\n            }\n        ]\n    }\n}",
+                    "ordering": 3,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n    \"email\" : \"mo@mo.com\",\r\n    \"password\" : \"Test@123\"\r\n}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 40,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.24548582"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "SubmitComplaint",
+              "api": {
+                "id": "17604969",
+                "method": "post",
+                "path": "http://localhost\\___Mo Projects\\ceruns\\app-api\\complaint.php",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "HFxSk6ZHI2",
+                      "enable": true,
+                      "name": "action",
+                      "example": "SubmitComplaint"
+                    }
+                  ],
+                  "header": [
+                    {
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "id": "E9RY7ZGLwX",
+                      "example": "en",
+                      "enable": true,
+                      "name": "Lang-Code",
+                      "schema": {
+                        "type": "string",
+                        "enum": [
+                          "en",
+                          "ar"
+                        ],
+                        "x-apidog-enum": [
+                          {
+                            "value": "en",
+                            "name": "",
+                            "description": ""
+                          },
+                          {
+                            "value": "ar",
+                            "name": "",
+                            "description": ""
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "24568274",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "suceess",
+                    "data": "{\n    \"data\": true,\n    \"success\": true\n}",
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed",
+                    "data": "{\n    \"error\": \"wrong happened\",\n    \"success\": false\n}",
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n    \"full_name\": \"أحمد محمد علي\",\r\n    \"contact_info\": \"ahmed@example.com\",\r\n    \"complaint_type\": \"تأخير في صرف الرواتب\",\r\n    \"employer_name\": \"شركة التقنية المتطورة\",\r\n    \"employer_address\": \"الرياض - حي العليا - شارع العليا العام\",\r\n    \"employer_phone\": \"0501234567\",\r\n    \"evidence_file_path\": \"/uploads/complaints/evidence_123.pdf\",\r\n    \"evidence_description\": \"نسخة من عقد العمل وكشف الحساب البنكي\"\r\n}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 50,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.24568274"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "AddJops",
+              "api": {
+                "id": "17615320",
+                "method": "post",
+                "path": "http://localhost/___Mo Projects/ceruns/app-api/jops.php",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "zhfE6afN1x",
+                      "enable": true,
+                      "name": "action",
+                      "example": "AddJops"
+                    }
+                  ],
+                  "header": [
+                    {
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "id": "MOuPh5HCMu",
+                      "example": "en",
+                      "enable": true,
+                      "name": "Lang-Code",
+                      "schema": {
+                        "type": "string",
+                        "enum": [
+                          "en",
+                          "ar"
+                        ],
+                        "x-apidog-enum": [
+                          {
+                            "value": "en",
+                            "name": "",
+                            "description": ""
+                          },
+                          {
+                            "value": "ar",
+                            "name": "",
+                            "description": ""
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "24604591",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "success",
+                    "data": "{\n    \"data\": 1,\n    \"success\": true\n}",
+                    "responseId": 24604591,
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed",
+                    "data": "{\n    \"error\": \"someErrorHappen\",\n    \"success\": false\n}",
+                    "responseId": 24604591,
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n  \"jop_title\": 1,\r\n  \"jop_times\": [1,2,3],\r\n  \"jop_requirments\": \"Strong knowledge of Angular, HTML, CSS, TypeScript\",\r\n  \"country\": \"Egypt\",\r\n  \"is_money\": 1,\r\n  \"money\": 12000\r\n}\r\n"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "add a new post for a new jop",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 60,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.24604591"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "GetJops",
+              "api": {
+                "id": "17616659",
+                "method": "get",
+                "path": "http://localhost/___Mo Projects/ceruns/app-api/jops.php",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "n5dJdyTsCy",
+                      "enable": true,
+                      "name": "action",
+                      "example": "GetJops"
+                    }
+                  ],
+                  "header": [
+                    {
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "id": "qcRox8sqyV",
+                      "example": "en",
+                      "enable": true,
+                      "name": "Lang-Code",
+                      "schema": {
+                        "type": "string",
+                        "enum": [
+                          "en",
+                          "ar"
+                        ],
+                        "x-apidog-enum": [
+                          {
+                            "value": "en",
+                            "name": "",
+                            "description": ""
+                          },
+                          {
+                            "value": "ar",
+                            "name": "",
+                            "description": ""
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "24605572",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "success",
+                    "data": "{\n    \"data\": [\n        {\n            \"id\": 6,\n            \"jop_title\": {\n                \"id\": 1,\n                \"date_added\": \"2025-06-01 01:08:12\",\n                \"name\": \"Content Writer\"\n            },\n            \"jop_times\": [\n                {\n                    \"id\": 2,\n                    \"jop_timing_id\": 1,\n                    \"lang_code\": \"en\",\n                    \"name\": \"full-time\",\n                    \"date_added\": \"2025-06-01\"\n                },\n                {\n                    \"id\": 4,\n                    \"jop_timing_id\": 2,\n                    \"lang_code\": \"en\",\n                    \"name\": \"part-time\",\n                    \"date_added\": \"2025-06-01\"\n                },\n                {\n                    \"id\": 6,\n                    \"jop_timing_id\": 3,\n                    \"lang_code\": \"en\",\n                    \"name\": \"contract\",\n                    \"date_added\": \"2025-06-01\"\n                }\n            ],\n            \"jop_requirments\": \"Strong knowledge of Angular, HTML, CSS, TypeScript\",\n            \"country\": \"Egypt\",\n            \"is_money\": 1,\n            \"money\": \"12000.00\",\n            \"created_at\": \"2025-06-03 13:39:12\"\n        }\n    ],\n    \"success\": true\n}",
+                    "responseId": 24605572,
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed",
+                    "data": "{\n    \"error\": \"someErrorHappen\",\n    \"success\": false\n}",
+                    "responseId": 24605572,
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "none",
+                  "parameters": [],
+                  "mediaType": "",
+                  "examples": [],
+                  "oasExtensions": ""
+                },
+                "description": "get the jops",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 70,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.24605572"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            },
+            {
+              "name": "GetAllUsersByJopID",
+              "api": {
+                "id": "17618046",
+                "method": "get",
+                "path": "http://localhost/___Mo Projects/ceruns/app-api/users.php",
+                "parameters": {
+                  "query": [
+                    {
+                      "required": false,
+                      "description": "",
+                      "type": "string",
+                      "id": "ZYhBBkkcm2",
+                      "enable": true,
+                      "name": "action",
+                      "example": "GetAllUsersByJopID"
+                    }
+                  ],
+                  "header": [
+                    {
+                      "required": true,
+                      "description": "",
+                      "type": "string",
+                      "id": "7xQoEhLKe2",
+                      "example": "en",
+                      "enable": true,
+                      "name": "Lang-Code",
+                      "schema": {
+                        "type": "string",
+                        "enum": [
+                          "en",
+                          "ar"
+                        ],
+                        "x-apidog-enum": [
+                          {
+                            "value": "en",
+                            "name": "",
+                            "description": ""
+                          },
+                          {
+                            "value": "ar",
+                            "name": "",
+                            "description": ""
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "auth": {},
+                "securityScheme": {},
+                "commonParameters": {
+                  "query": [],
+                  "body": [],
+                  "cookie": [],
+                  "header": []
+                },
+                "responses": [
+                  {
+                    "id": "24606421",
+                    "code": 200,
+                    "name": "Success",
+                    "headers": [],
+                    "jsonSchema": {
+                      "type": "object",
+                      "properties": {}
+                    },
+                    "description": "",
+                    "contentType": "json",
+                    "mediaType": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "responseExamples": [
+                  {
+                    "name": "success",
+                    "data": "{\n    \"data\": [\n        {\n            \"id\": 9,\n            \"user_name\": \"Test User\",\n            \"img\": null,\n            \"email\": \"test@example.com\",\n            \"mobile\": \"1234567890\",\n            \"code\": \"\",\n            \"dial_code\": \"+20\",\n            \"open_location\": \"true\",\n            \"birth_date\": \"1990-01-01\",\n            \"gender\": null,\n            \"exp_years\": 3,\n            \"country\": \"Egypt\",\n            \"jop_times\": [\n                false,\n                false,\n                false\n            ],\n            \"jop_titles\": [\n                {\n                    \"id\": 1,\n                    \"date_added\": \"2025-06-01 01:08:12\",\n                    \"name\": \"Content Writer\"\n                },\n                {\n                    \"id\": 2,\n                    \"date_added\": \"2025-06-01 01:08:12\",\n                    \"name\": \"Proofreader\"\n                },\n                {\n                    \"id\": 3,\n                    \"date_added\": \"2025-06-01 01:08:12\",\n                    \"name\": \"Graphic Designer\"\n                }\n            ]\n        }\n    ],\n    \"success\": true\n}",
+                    "ordering": 1,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  },
+                  {
+                    "name": "failed",
+                    "data": "{\n    \"error\": \"someErrorHappen\",\n    \"success\": false\n}",
+                    "ordering": 2,
+                    "description": "",
+                    "oasKey": "",
+                    "oasExtensions": ""
+                  }
+                ],
+                "requestBody": {
+                  "type": "application/json",
+                  "parameters": [],
+                  "jsonSchema": {
+                    "type": "object",
+                    "properties": {}
+                  },
+                  "mediaType": "",
+                  "examples": [
+                    {
+                      "mediaType": "application/json",
+                      "value": "{\r\n    \"id\" : \"1\"\r\n}"
+                    }
+                  ],
+                  "oasExtensions": ""
+                },
+                "description": "",
+                "tags": [],
+                "status": "developing",
+                "serverId": "",
+                "operationId": "",
+                "sourceUrl": "",
+                "ordering": 80,
+                "cases": [],
+                "mocks": [],
+                "customApiFields": "{}",
+                "advancedSettings": {
+                  "disabledSystemHeaders": {}
+                },
+                "mockScript": {},
+                "codeSamples": [],
+                "commonResponseStatus": {},
+                "responseChildren": [
+                  "BLANK.24606421"
+                ],
+                "visibility": "INHERITED",
+                "oasExtensions": "",
+                "preProcessors": [],
+                "postProcessors": [],
+                "inheritPostProcessors": {},
+                "inheritPreProcessors": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "socketCollection": [],
+  "docCollection": [],
+  "webSocketCollection": [],
+  "socketIOCollection": [],
+  "responseCollection": [
+    {
+      "_databaseId": 889715,
+      "updatedAt": "2025-03-26T09:56:11.000Z",
+      "name": "Root",
+      "type": "root",
+      "children": [],
+      "parentId": 0,
+      "id": 889715,
+      "items": [
+        {
+          "_databaseId": 2969769,
+          "name": "Record not found",
+          "code": 404,
+          "contentType": "json",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "integer"
+              },
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code",
+              "message"
+            ],
+            "x-apidog-orders": [
+              "code",
+              "message"
+            ]
+          },
+          "defaultEnable": false,
+          "folderId": 0,
+          "id": 2969769,
+          "databaseResponseExamples": [],
+          "responseExamples": []
+        },
+        {
+          "_databaseId": 2969770,
+          "name": "Invalid input",
+          "code": 400,
+          "contentType": "json",
+          "jsonSchema": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "integer"
+              },
+              "message": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "code",
+              "message"
+            ],
+            "x-apidog-orders": [
+              "code",
+              "message"
+            ]
+          },
+          "defaultEnable": false,
+          "folderId": 0,
+          "id": 2969770,
+          "databaseResponseExamples": [],
+          "responseExamples": []
+        }
+      ]
+    }
+  ],
+  "schemaCollection": [],
+  "securitySchemeCollection": [],
+  "requestCollection": [
+    {
+      "name": "Root",
+      "children": [],
+      "ordering": [
+        "requestFolder.997760"
+      ],
+      "items": []
+    }
+  ],
+  "environments": [],
+  "commonScripts": [],
+  "globalVariables": [],
+  "commonParameters": null,
+  "projectSetting": {
+    "id": "857156",
+    "auth": {},
+    "securityScheme": {},
+    "servers": [
+      {
+        "id": "default",
+        "name": "Default Server"
+      }
+    ],
+    "gateway": [],
+    "language": "en-US",
+    "apiStatuses": [
+      "developing",
+      "testing",
+      "released",
+      "deprecated"
+    ],
+    "mockSettings": {},
+    "preProcessors": [],
+    "postProcessors": [],
+    "advancedSettings": {
+      "enableJsonc": false,
+      "enableBigint": false,
+      "responseValidate": true,
+      "enableTestScenarioSetting": false,
+      "enableYAPICompatScript": false,
+      "isDefaultUrlEncoding": 3,
+      "publishedDocUrlRules": {
+        "defaultRule": "SLUGIFY_WITH_RESOURCE_KEY",
+        "resourceKeyStandard": "NEW"
+      }
+    },
+    "initialDisabledMockIds": [],
+    "cloudMock": {
+      "security": "free",
+      "enable": false,
+      "tokenKey": "apidogToken"
+    }
+  },
+  "customFunctions": [],
+  "projectAssociations": []
+}
